@@ -1,0 +1,331 @@
+body {
+  overflow-x: hidden;
+ background-color: white;
+
+}
+/* pour changer la couleur des cards qui se trouvent dans la dashboard*/
+#card {
+background-color: #CFB53B;
+}
+
+
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background-color: black;
+position: sticky; /*pour faire le side barre temchi 3la toul l page aussi top m3eha*/
+top: 0%;
+  
+}
+
+
+/* on clique sur le sidebar le couleur va changer de noir en doré*/
+#sidebar-wrapper .list-group-item:hover{
+  background-color: #CFB53B;
+  color: white;
+}
+/*pour fixer le couleur*/
+#sidebar-wrapper .list-group-item:focus {
+  background-color: #CFB53B;
+  color: white;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group-item {
+  width: 15rem;
+  background-color: black;
+  color:#FACF6B ;
+
+}
+
+#page-content-wrapper {
+  min-width: 100vw; 
+  background-color:black;
+  background-image: url(./image/th111.jpg); 
+
+
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+      margin-left: 0;
+  }
+
+  #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+
+  }
+}
+
+#as-react-datatable-container select {
+
+  border-color: black;
+  background-color: rgb(82, 78, 78);
+
+}
+
+#menu-toggle{
+  color: gold;
+}
+*{
+  color: rgb(185, 184, 179);
+}
+#profil{
+  color: #FACF6B;
+}
+#navbar-content{
+  background-color: black;
+}
+#column{
+  color: #666561;
+}
+/*pourla page notification*/
+table {
+  border-style: groove;
+  width:90%;
+  }
+ th, td {
+  border:1px solid rgb(12, 12, 12);
+  border-style: ridge;
+  width:20%;
+  }
+ td {
+  text-align:left;
+  }
+  /*pour la page change password*/
+  #card1{
+      height: 50px;
+      width: 50%;
+      flex-direction: column;
+      background-color: #333332;
+      
+    }
+    .div1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1 1 auto;
+      margin: 0 auto;
+      
+      height: 80px;
+      width: 80%;
+    }
+/*pour la page qui contient les messages*/
+    body{
+       background-image: url(./image/th111.jpg)}
+     .main__chatcontent {
+         flex-grow: 1;
+         padding: 100px 100px;
+         max-width: 100%;
+       }
+      
+       .current-chatting-user {
+         display: flex;
+         align-items: center;
+       }
+       .current-chatting-user p {
+         margin: 0;
+         font-weight: 600;
+       }
+       .content__header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+       }
+       .settings .btn-nobg {
+         color: #000;
+       }
+       .content__body {
+         max-height: calc(100vh - calc(100vh / 2));
+         overflow: auto;
+         max-height: 100%;
+       }
+       .chat__item {
+         display: flex;
+         justify-content: flex-end;
+         align-items: flex-end;
+         margin-bottom: 15px;
+         transition: all 0.3s ease;
+         transform: scale(0);
+         transform-origin: right;
+         animation-name: showIn;
+         animation-duration: 0.2s; /* or: Xms */
+         animation-iteration-count: 1;
+         animation-direction: normal; /* or: normal */
+         animation-timing-function: cubic-bezier(
+           0.88,
+           0.19,
+           0.37,
+           1.11
+         ); /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+         animation-fill-mode: both; /* or: backwards, both, none */
+         animation-delay: 0.2s; /* or: Xms */
+         
+       }
+       @keyframes showIn {
+         1% {
+           transform: scale(0);
+         }
+         100% {
+           transform: scale(1);
+         }
+       }
+       .chat__item .avatar {
+         margin-right: 0px;
+         margin-left: 20px;
+         background: #fff;
+         padding: 1px;
+       }
+       .chat__item__content {
+         background-color: #CFB53B;
+         color: #fff;
+         padding: 15px;
+         border-radius: 10px 10px 0 10px;
+         max-width: 50%;
+         min-width: 215px;
+       }
+       .chat__item__content .chat__meta {
+         justify-content: space-between;
+         display: flex;
+         margin-top: 10px;
+       }
+       .chat__item__content .chat__meta span {
+         font-size: 14px;
+         color: #c2c2c7;
+         user-select: none;
+       }
+       .chat__msg {
+         user-select: none;
+       }
+       
+       .chat__item.other {
+         flex-direction: row-reverse;
+         transform-origin: left;
+         
+       }
+/* pour la page decline event*/
+       #modal-content{
+          background-image: url(./image/cat1.jpg);
+          color: black;
+      }
+      #user-update-name{
+          color: black;
+      }
+
+
+
+
+
+/*login*/
+#login{
+color: gold;
+margin:0 auto;
+
+}
+/* notif*/
+#notif{
+
+box-sizing: border-box;
+position: relative;
+margin-right: 1em;
+border-radius: 5px;
+
+   color: rgb(241, 243, 148);
+  border-color: black;
+
+ 
+
+}
+.num-count {
+position: absolute;
+user-select: none;
+cursor: default;
+font-size: 0.6rem;
+
+width: 1.2rem;
+height: 1.2rem;
+
+display: inline-flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+top: -0.33rem;
+right: -.66rem;
+box-sizing: border-box;
+}
+#notif1{
+
+position :-ms-page;
+left: 10;
+top: 10;
+border-width:1.3;
+ color: honeydew;
+border-color: black;
+background-color: rgb(247, 231, 110);
+border-radius: 10;
+width: 5%;
+height: '10%';
+justify-content: left;
+align-items: 'center';
+
+}
+
+.dropdown{
+background-color: black;
+}
+#text-color {
+color: #11100e;
+
+}
+
+#alert-color {
+background-color: 	#a7a59c;
+opacity: 0.5;
+color: black;
+}
+
+
+/*css de la page security / chnage password*/
+/* label*/
+#form-data .form-group .input-data {
+color:  #FACF6B;
+}
+/* h1 */
+#page-content-wrapper .change-pass{
+ color: #FACF6B;
+}
+/*input*/
+#form-data .form-group .form-control {
+ background-color: 	#F0E68C;
+ opacity: 0.5;
+ color: black;
+
+}
+#page-content-wrapper .card-class{
+margin: 0 auto;
+}
+
+
+
+
