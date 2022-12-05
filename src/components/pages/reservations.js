@@ -42,28 +42,50 @@ class Reservations extends Component {
                
             // },
             {
-                key: "title",
-                text: "Title Réclamation",
+                key: "_id",
+                text: "id",
                 className: "username",
                 align: "left",
                 sortable:true
             },
            
             {
-                key: "type",
-                text: "type",
+                key: "_id_voyageur",
+                text: "Voyageur",
                 className: "email",
                 align: "left",
                 sortable:true
             },
             {
-                key: "message",
-                text: "message",
+                key: "_id_user",
+                text: "Utlisateur",
                 className: "phoneNumber",
                 align: "left",
                 sortable:true
             },
+            {
+                key: "valide_reservation",
+                text: "Valide Réservation",
+                className: "phoneNumber",
+                align: "left",
+                sortable:true
+            },
+            {
+                key: "valide_livraison",
+                text: "Valide Livraison ",
+                className: "phoneNumber",
+                align: "left",
+                sortable:true
+            },
+
        
+            {
+                key: "_id_post",
+                text: "Publication",
+                className: "phoneNumber",
+                align: "left",
+                sortable:true
+            },
             
             {
                 key: "action",
@@ -122,7 +144,7 @@ this.options = {
 
     getData() {/* pour lister tous  réclamations */
         instance
-            .get("/api/complaints/complaint-data")
+            .get("api/reservations/reservations-data")
             .then(res => {
                 this.setState({ records: res.data})
             })
@@ -131,7 +153,7 @@ this.options = {
 
     deleteRecord(record) {
         instance
-            .post("/api/complaints/complaint-delete", {_id: record._id})
+            .post("api/reservations/delete-reservation", {_id: record._id})
             .then(res => {
                 if (res.status === 200) {
                    toast(res.data.message, {
@@ -158,7 +180,7 @@ this.options = {
                    
             
                             <CardHeader>
-                  <CardTitle tag="h4" className="mt-2 text-warning">Réservations  List</CardTitle>
+                  <CardTitle tag="h4" className="mt-2 text-warning">List des Réservations   </CardTitle>
                 </CardHeader>
                
                             <CardBody>

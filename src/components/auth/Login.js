@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { loginAdmin } from "../../actions/authActions";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
+import { textAlign } from "@mui/system";
 class Login extends Component {
   constructor() {
     super();
@@ -53,6 +54,7 @@ class Login extends Component {
           <div className="col-md-4 mx-auto mt-5 card shadow-lg">
             <div id ="login">
               <h2 className="text-center text-warning mt-3">Login</h2>
+              <img    width="100px"  height="100px" src="https://firebasestorage.googleapis.com/v0/b/wasini-30843.appspot.com/o/logo.png?alt=media&token=15fd1920-51a8-4492-b738-febf4122b4c5" alt="image not fund " />
               <form noValidate onSubmit={this.onSubmit} className="white">
                 <label htmlFor="email" id="login">Email</label>
                 <input
@@ -85,10 +87,10 @@ class Login extends Component {
                     className="btn btn-large btn-warning mt-2 px-5">
                     Sign In
                   </button>
-                  <p id="login">You don't have an account?
+                  {/* <p id="login">You don't have an account?
                                     <Link to="/register" className="formFieldLink">
                       Create an account !
-            </Link></p>
+            </Link></p> */}
                 </p>
               </form>
             </div>

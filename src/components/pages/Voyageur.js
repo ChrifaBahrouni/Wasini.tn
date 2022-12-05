@@ -108,7 +108,7 @@ class Voyageurs extends Component {
                 cell: record => {
                     return (
                         <Fragment>
-                            <img src={`http://localhost:5000/api/users/user/photo/${record._id}`} height="50" width="50" roundedCircle />{/**pour avoir l'image binary de la data base ${record._id} pour avoir l'id `} /post/photo/ c'est une fonction qui est dans le backend pour afficher l'image */}
+                            <img src={record.photo} height="50" width="50" roundedCircle />{/**pour avoir l'image binary de la data base ${record._id} pour avoir l'id `} /post/photo/ c'est une fonction qui est dans le backend pour afficher l'image */}
                         </Fragment>
                     );
                 }
@@ -169,9 +169,9 @@ this.options = {
         this.getData()
     }
 
-    getData() {/* pour lister tous user*/
+    getData() {/* pour lister tous voyageurs */
         instance
-            .get("/api/users/user-data")
+            .get("/api/voyageurs/voyageur-data")
             .then(res => {
                 this.setState({ records: res.data})
             })
@@ -180,7 +180,7 @@ this.options = {
 
     deleteRecord(record) {
         instance
-            .post("/api/users/user-delete", {_id: record._id})
+            .post("/api/voyageurs/voyageur-delete", {_id: record._id})
             .then(res => {
                 if (res.status === 200) {
                    toast(res.data.message, {

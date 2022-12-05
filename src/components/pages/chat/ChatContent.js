@@ -1,7 +1,7 @@
 import React, { Component, useState, createRef, useEffect } from "react";
 
-
 import ChatItem from "./ChatItem";
+
 
 export default class ChatContent extends Component {
   messagesEndRef = createRef(null);
@@ -31,6 +31,7 @@ export default class ChatContent extends Component {
   }
   //pour avoir la data from chat dans la base de donnée
   componentWillMount() {
+  
     fetch("http://localhost:5000/api/chats/get")
       .then(res => res.json())
       .then(data => this.setState({ messages: data }));

@@ -33,25 +33,25 @@ class Claming extends Component {
         super(props);
 
         this.columns = [/*les champs qui sont trouvés dans la table */ 
-            // {
-            //     key: "_id",
-            //     text: "Id",
-            //     align: "left",
-            //     bgcolor:"red",
-            //    sortable:true
-               
-            // },
+           
             {
-                key: "title",
-                text: "Title Réclamation",
+                key: "_id_voyageur",
+                text: " Voyageur",
+                className: "username",
+                align: "left",
+                sortable:true
+            },
+            {
+                key: "_id_user",
+                text: "utilisateur",
                 className: "username",
                 align: "left",
                 sortable:true
             },
            
             {
-                key: "type",
-                text: "type",
+                key: "_id_post",
+                text: "Post ",
                 className: "email",
                 align: "left",
                 sortable:true
@@ -158,7 +158,7 @@ this.options = {
                    
             
                             <CardHeader>
-                  <CardTitle tag="h4" className="mt-2 text-warning">Complaints  List</CardTitle>
+                  <CardTitle tag="h4" className="mt-2 text-warning"> List des Réclamations  </CardTitle>
                 </CardHeader>
                
                             <CardBody>
